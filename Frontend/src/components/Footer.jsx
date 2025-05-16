@@ -3,12 +3,14 @@ import { assets } from '../assets/assets'
 
 const Footer = () => {
   return (
-    <div>
-        <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm'>
+    <div className='bg-zinc-200 w-full'> {/* Light gray background and full width */}
+        <div className='max-w-[1200px] mx-auto px-6 flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 py-8 mt-40 text-sm'>
 
             <div>
                 <img src={assets.logo} className='mb-5 w-32' alt="" />
-                <p className='w-full md:w-2/3 text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p className='w-full md:w-2/3 text-gray-600'>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
             </div>
 
             <div>
@@ -17,7 +19,7 @@ const Footer = () => {
                     <li>Home</li>
                     <li>About us</li>
                     <li>Delivery</li>
-                    <li>Privacy </li>
+                    <li>Privacy</li>
                 </ul>
             </div>
 
@@ -28,12 +30,12 @@ const Footer = () => {
                     <li>contact@foreveryou.com</li>
                 </ul>
             </div>
-
         </div>
-        
-        <div>
-            <hr/>
-            <p className='py-5 text-sm text-center'>Copyright 2025@ forever.com - All Right Reserved</p>
+
+        <div className='border-t border-gray-300'>
+            <p className='py-5 text-sm text-center text-gray-700'>
+                Copyright 2025© forever.com - All Rights Reserved
+            </p>
         </div>
     </div>
   )
