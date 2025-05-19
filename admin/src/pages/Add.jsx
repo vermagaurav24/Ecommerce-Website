@@ -28,7 +28,7 @@ const Add = ({token}) => {
             formData.append("name",name)
             formData.append("description",description)
             formData.append("price",price)
-            formData.append("Category",Category)
+            formData.append("category",Category)
             formData.append("subCategory",subCategory)
             formData.append("bestseller",bestseller)
             formData.append("sizes", JSON.stringify(sizes))
