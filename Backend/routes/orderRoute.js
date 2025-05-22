@@ -12,7 +12,7 @@ import authUser from '../middleware/auth.js';
 //  payment feature
 orderRouter.post('/place', placeOrder)
 orderRouter.post('stripe', authUser, placeOrderStripe)
-orderRouter.post('/razorpay', placeOrderRazorpay)
+orderRouter.post('/razorpay',authUser, placeOrderRazorpay)
 
 // user feature
 orderRouter.post('/userorders', authUser, userOrders)
