@@ -5,11 +5,12 @@ import { assets } from '../assets/assets'
 import { ShopContext } from '../context/ShopContext'
 import axios from 'axios'
 import { toast } from 'react-toastify'
+import { useNavigate } from 'react-router-dom'
 
 const PlaceOrder = () => {
 
   const [method, setMethod] = useState('cod');
-  const { navigate, backendUrl, token, cartItems, setCartItems, getCartAmount, delivery_fee, products} = useContext(ShopContext);
+  const { navigate, backendUrl, token, cartItems, setCartItems, getCartAmount, delivery_fee, products } = useContext(ShopContext);
 
   const [formData, setFormData] = useState({
     firstName: '',
@@ -49,7 +50,15 @@ const PlaceOrder = () => {
         }
       }
 
+      const userId = localStorage.getItem('userId');
+      if (!userId) {
+        toast.error('User not logged in. Please login first.')
+        return;
+      }
+
+
       let orderData = {
+        userId,
         address: formData,
         items: orderItems,
         amount: getCartAmount() + delivery_fee
@@ -59,13 +68,13 @@ const PlaceOrder = () => {
 
         // API call for cod
         case 'cod':
-          const response = await axios.post(backendUrl + '/api/order/place', orderData, { headers: { token }})
+          const response = await axios.post(backendUrl + '/api/order/place', orderData, { headers: { Authorization: `Bearer ${token}` } })
           console.log(response.data.success);
           if (response.data.success) {
             setCartItems({})
             navigate('/orders')
           } else {
-            toast.error(response.data.message)
+            toast.error(response.data.message || "Failed to place order")
           }
           break;
 
