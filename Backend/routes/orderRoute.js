@@ -10,7 +10,7 @@ import authUser from '../middleware/auth.js';
  orderRouter.post('/status', adminAuth, updateStatus)
 
 //  payment feature
-orderRouter.post('/place', placeOrder)
+orderRouter.post('/place',authUser, placeOrder)
 orderRouter.post('stripe', authUser, placeOrderStripe)
 orderRouter.post('/razorpay',authUser, placeOrderRazorpay)
 

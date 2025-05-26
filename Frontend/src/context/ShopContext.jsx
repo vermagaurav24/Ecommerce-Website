@@ -16,18 +16,28 @@ const ShopContextProvider = (props) => {
     const [search, setSearch] = useState('');
     const [showSearch, setShowSearch] = useState(false);
     const [cartItems, setCartItems] = useState({});
+
     useEffect(() => {
         try {
             const stored = localStorage.getItem("cartItems");
-            if (stored) setCartItems(JSON.parse(stored));
+            if (stored) {
+                const parsed = JSON.parse(stored);
+                if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
+                    setCartItems(parsed);
+                } else {
+                    setCartItems({});
+                }
+            }
         } catch (err) {
             console.error("Could not load cart from localStorage:", err);
+            setCartItems({});
         }
     }, []);
+
     useEffect(() => {
         localStorage.setItem("cartItems", JSON.stringify(cartItems));
     }, [cartItems]);
-    
+
     const [products, setProducts] = useState([]);
     const [token, setToken] = useState('');
     const navigate = useNavigate();
@@ -38,7 +48,8 @@ const ShopContextProvider = (props) => {
             toast.error('Select product size');
             return;
         }
-        let cartData = structuredClone(cartItems);
+        let cartData = structuredClone(cartItems || {});
+        if (!cartData[itemId]) cartData[itemId] = {};
 
         if (cartData[itemId]) {
             if (cartData[itemId][size]) {
@@ -138,7 +149,9 @@ const ShopContextProvider = (props) => {
             const userId = localStorage.getItem('userId');
             const response = await axios.post(backendUrl + '/api/cart/get', { userId }, { headers: { Authorization: `Bearer ${token}` } })
             if (response.data.success) {
-                setCartItems(response.data.cartData)
+                if (response.data.cartData && Object.keys(response.data.cartData).length > 0) {
+                    setCartItems(response.data.cartData);
+                }
             }
 
         } catch (error) {

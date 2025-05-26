@@ -72,6 +72,7 @@ const PlaceOrder = () => {
           console.log(response.data.success);
           if (response.data.success) {
             setCartItems({})
+            // localStorage.setItem("cartItems", JSON.stringify({cartItems}))
             navigate('/orders')
           } else {
             toast.error(response.data.message || "Failed to place order")
