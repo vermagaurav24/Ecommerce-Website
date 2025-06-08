@@ -9,7 +9,7 @@ const Footer = () => {
             <div>
                 <img src={assets.logo} className='mb-5 w-32' alt="" />
                 <p className='w-full md:w-2/3 text-gray-600'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Forever is more than fashion — it's a feeling, a lifestyle, and a promise of timeless elegance.
                 </p>
             </div>
 

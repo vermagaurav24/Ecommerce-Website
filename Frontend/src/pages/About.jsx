@@ -8,16 +8,17 @@ const About = () => {
     <div>
 
       <div className='text-2xl text-center pt-8 border-t'>
-        <Title text1={'ABOUT'} text2={'US'}/>
+        <Title text1={'ABOUT'} text2={'US'} />
       </div>
 
-      <div className='my-10 flex flex-col md:flex-row gap-16'>
+      <div className='my-10 flex flex-col md:flex-row gap-14'>
         <img className='w-full md:max-w-[450px]' src={assets.about_img} alt="" />
-        <div className='flex flex-col justify-center gap-6 md:w-2/4 text-gray-600'>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos accusamus dolore temporibus soluta, dolor reprehenderit eligendi! Vero animi blanditiis, nobis consectetur nam esse. Aspernatur, doloribus.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam quae impedit soluta a pariatur ratione hic, enim, esse, omnis nobis deserunt autem? Dolores, aliquid consequatur?</p>
-            <b className='text-gray-800'>Our Mission</b>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, quasi?</p>
+        <div className='flex flex-col justify-center gap-10 md:w-2/4 text-gray-600'>
+          <p>Welcome to FOREVER, your one-stop destination for stylish, affordable, and high-quality products.
+            We believe shopping should be easy, enjoyable, and trustworthy — and that's exactly what we aim to deliver.</p>
+          <p>At the heart of everything we do is you — our customer. From secure checkout to fast delivery and reliable support, we are here to make your shopping experience smooth and satisfying.</p>
+          <b className='text-gray-800'>Our Mission</b>
+          <p>our mission is to bring you the best from fashion, lifestyle, and everyday essentials — all at your fingertips. Whether you're looking for the latest trends, everyday comfort, or something unique, we have got you covered.</p>
         </div>
       </div>
 
@@ -28,19 +29,20 @@ const About = () => {
       <div className='flex flex-col md:flex-row text-sm mb-20'>
         <div className='border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5'>
           <b>Quality Assurance:</b>
-          <p className='text-gray-600'>We meticulously slect and vet each product to ensure it quality</p>
+          <p className='text-gray-600'>We handpick and rigorously inspect every product to meet the highest standards of quality. Your satisfaction and trust matter, so we deliver nothing but the best.</p>
         </div>
         <div className='border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5'>
           <b>Convenience:</b>
-          <p className='text-gray-600'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio sed accusantium nisi!</p>
+          <p className='text-gray-600'>Enjoy a seamless shopping experience from browsing to checkout. With a user-friendly interface, secure payment options, and fast delivery, everything you need is just a click away.
+          </p>
         </div>
         <div className='border px-10 md:px-16 py-8 sm:py-20 flex flex-col gap-5'>
           <b>Exceptional Customer Service:</b>
-          <p className='text-gray-600'>We meticulously slect and vet each product to ensure it quality</p>
+          <p className='text-gray-600'>Our support team is always ready to help — before, during, and after your purchase. We believe in building relationships, not just transactions.</p>
         </div>
       </div>
 
-      <NewsletterBox/>
+      <NewsletterBox />
 
     </div>
   )
