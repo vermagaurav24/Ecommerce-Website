@@ -10,7 +10,7 @@ const Footer = () => {
                 <div>
                     <img src={assets.logo1} className='mb-5 w-32' alt="" />
                     <p className='w-full md:w-2/3 text-gray-600'>
-                        Forever is more than fashion — it's a feeling, a lifestyle, and a promise of timeless elegance.
+                        DesiCart is more than fashion — it's a feeling, a lifestyle, and a promise of timeless elegance.
                     </p>
                 </div>
 
@@ -27,15 +27,15 @@ const Footer = () => {
                 <div>
                     <p className='text-xl font-medium mb-5'>GET IN TOUCH</p>
                     <ul className='flex flex-col gap-1 text-gray-600'>
-                        <li>+1-212-369-6789</li>
-                        <li>contact@foreveryou.com</li>
+                        <li>+1212-369-6789</li>
+                        <li>contact@desicartyou.com</li>
                     </ul>
                 </div>
             </div>
 
             <div className='border-t border-gray-300'>
                 <p className='py-5 text-sm text-center text-gray-700'>
-                    Copyright 2025© forever.com - All Rights Reserved
+                    Copyright 2025© DesiCart.com - All Rights Reserved
                 </p>
             </div>
         </div>
