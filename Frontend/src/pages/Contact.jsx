@@ -16,8 +16,8 @@ const Contact = () => {
         <div className='flex flex-col justify-center items-start gap-6'>
           <p className='font-semibold text-xl text-gray-600'>Our Store</p>
           <p className='text-gray-500'>769001 Dwarikapury colony <br /> Daliganj, Kanpur,India</p>
-          <p className='text-gray-500'>Tel: (415) 555-0132 <br />Email:adimin@forever.com</p>
-          <p className='font-semibold text-xl text-gray-600'>Careers at Forever</p>
+          <p className='text-gray-500'>Tel: (415) 555-0132 <br />Email:adimin@desicart.com</p>
+          <p className='font-semibold text-xl text-gray-600'>Careers at DesiCart</p>
           <p className='text-gray-500'>Learn more about out teams and job openings</p>
           <button className='border border-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500'>Explore jobs</button>
         </div>

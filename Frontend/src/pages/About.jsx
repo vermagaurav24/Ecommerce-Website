@@ -12,13 +12,12 @@ const About = () => {
       </div>
 
       <div className='my-10 flex flex-col md:flex-row gap-14'>
-        <img className='w-full md:max-w-[450px]' src={assets.about_img} alt="" />
+        <img className='w-full md:max-w-[450px]' src={assets.about_img1} alt="" />
         <div className='flex flex-col justify-center gap-10 md:w-2/4 text-gray-600'>
-          <p>Welcome to FOREVER, your one-stop destination for stylish, affordable, and high-quality products.
-            We believe shopping should be easy, enjoyable, and trustworthy — and that's exactly what we aim to deliver.</p>
-          <p>At the heart of everything we do is you — our customer. From secure checkout to fast delivery and reliable support, we are here to make your shopping experience smooth and satisfying.</p>
+          <p>Welcome to DesiCart – your trusted destination for authentic, handmade treasures crafted by skilled village artisans. Our goal is to bring you closer to India’s rich culture and craftsmanship through beautiful, affordable, and meaningful products — made with heart and heritage.</p>
+          <p>At the core of DesiCart is a mission to support rural talent. Many artisans lack the means to reach the wider world — we’re here to bridge that gap. From doorstep pickup to seamless online shopping, we ensure every purchase helps empower local hands and preserve traditional skills.</p>
           <b className='text-gray-800'>Our Mission</b>
-          <p>our mission is to bring you the best from fashion, lifestyle, and everyday essentials — all at your fingertips. Whether you're looking for the latest trends, everyday comfort, or something unique, we have got you covered.</p>
+          <p>Our mission is to connect you with the soul of India — through handcrafted goods that tell a story. From eco-friendly home décor to everyday essentials made with care, everything you find here supports real people and real communities. When you shop with us, you’re not just buying — you’re uplifting lives.</p>
         </div>
       </div>
 
