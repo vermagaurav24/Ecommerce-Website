@@ -12,7 +12,7 @@ import orderRouter from './routes/orderRoute.js';
 const app = express()
 
 // ✅ CORS config to allow only your frontend domain
-const allowedOrigins = ['https://job-portal-seven-lac.vercel.app'];
+const allowedOrigins = ['https://ecommerce-website-eosin-eta.vercel.app'];
 
 app.use(cors({
   origin: function (origin, callback) {
