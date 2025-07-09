@@ -10,13 +10,28 @@ import orderRouter from './routes/orderRoute.js';
 
 // App config
 const app = express()
+
+// ✅ CORS config to allow only your frontend domain
+const allowedOrigins = ['https://job-portal-seven-lac.vercel.app'];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+}));
+
 const port = process.env.PORT || 4000
 connectDB()
 connectCloudinary()
 
 // Middlewares
 app.use(express.json())
-app.use(cors())
+// app.use(cors())
 
 // api endpoints
 app.use('/api/user', userRouter)
