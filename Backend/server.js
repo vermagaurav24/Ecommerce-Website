@@ -25,7 +25,6 @@ app.use(cors({
   credentials: true
 }));
 
-// const port = process.env.PORT || 4000
 connectDB()
 connectCloudinary()
 
@@ -42,5 +41,7 @@ app.use('/api/order', orderRouter)
 app.get('/', (req,res)=>{
     res.send("API Working")
 })
+
+const port = process.env.PORT || 4000
 
 app.listen(port, ()=> console.log('Server is running on PORT : '+ port))
